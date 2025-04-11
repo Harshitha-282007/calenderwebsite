@@ -1,0 +1,26 @@
+body{
+    height:100vh;
+    background-image: url("background.jpeg");
+    background-size: cover;
+}
+.ask{
+    color:red;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+.submit{
+    background-color: transparent;
+    color:aliceblue;
+    font-size: 30px;
+    border: 2px solid white;
+    text-decoration: none;
+}
+.main{
+    position: absolute;
+    left:30px;
+    top:200px;
+}
+.box{
+    font-size: 25px;
+}

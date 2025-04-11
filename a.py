@@ -1,4 +1,3 @@
-# Import necessary libraries
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -43,8 +42,6 @@ for event in soup.find_all("div", class_="event-wrapper"):
 
     # Only take the start date part (e.g., "Apr 12" from "Apr 12 – Apr 14")
     start_date = date.split("–")[0].strip()
-
-    # Create a small HTML card for this event
     card = f"""
         <a class="card" href="{link}" target="_blank">
             <div class="cd"><h2>{title}</h2></div>
@@ -72,7 +69,7 @@ with open(template_path, "r", encoding="utf-8") as f:
     html_file = f.read()
 
 if "<!-- PLACEHOLDER -->" not in html_file:
-    print("⚠️ Could not find <!-- PLACEHOLDER --> in the template file.")
+    print(" Could not find <!-- PLACEHOLDER --> in the template file.")
 else:
     updated_html = html_file.replace("<!-- PLACEHOLDER -->", final_html)
 
